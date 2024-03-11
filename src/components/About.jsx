@@ -66,7 +66,7 @@ const About = () => {
               <p className="text-gray-700 text-lg">
                 You can read my resume{" "}
                 <a
-                  href="https://drive.google.com/file/d/1fMU2OLYrFQLDqXe2EXSjhY2ZhS1LiINC/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/19vZqh7AEED9hSroGSgBa3j_8ahtbugiB/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline cursor-pointer text-blue-500"
