@@ -17,9 +17,16 @@ import {
 } from "react-icons/fa";
 import { MdMenu, MdClose } from "react-icons/md";
 
-function Sidebar() {
+import useTheme from "../../Theme/useTheme";
+import { IoIosMoon, IoIosSunny } from "react-icons/io";
+
+type Mode = "light" | "dark";
+
+export default function Sidebar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [activePage, setActivePage] = useState("home");
+  const { theme, setDarkMode, setLightMode } = useTheme();
+  const [mode, setMode] = useState<Mode>(theme);
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
@@ -29,7 +36,7 @@ function Sidebar() {
     setSidebarOpen(false);
   };
 
-  const handlePageChange = (pageName) => {
+  const handlePageChange = (pageName: string) => {
     setActivePage(pageName);
     closeSidebar();
   };
@@ -43,62 +50,67 @@ function Sidebar() {
     { name: "contact", icon: FaEnvelope, label: "Contact" },
   ];
 
+  const toggleColorScheme = () => {
+    setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+  };
+
   useEffect(() => {
-    const handleResize = () => {
-      setSidebarOpen(window.innerWidth > 1024 ? true : window.innerWidth > 768);
-    };
+    document.documentElement.setAttribute("class", theme);
+  }, [theme]);
 
-    const handlePageChange = () => {
-      const currentPage = window.location.pathname.substring(1);
-      setActivePage(currentPage || "home");
-    };
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("popstate", handlePageChange);
-
-    handleResize();
-    handlePageChange();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("popstate", handlePageChange);
-    };
-  }, []);
+  useEffect(() => {
+    mode === "light" ? setLightMode() : setDarkMode();
+  }, [mode, setDarkMode, setLightMode]);
 
   return (
     <div className="md:flex">
       <Card
-        className={`fixed left-0 top-0 h-screen w-[20rem] p-4 bg-white shadow-md z-50 ${
+        className={`fixed left-0 top-0 h-screen w-[20rem] p-4  bg-white shadow-md z-50 ${
           isSidebarOpen ? "" : "hidden md:block"
-        }`}
+        } ${theme === "light" ? "bg-white text-black" : "bg-black text-white"}`}
       >
         <div className="mb-2 p-4 m-5 justify-center flex items-center">
-          <Typography variant="h5" color="blue-gray">
-            Hii, Every One 🤚
+          <Typography variant="h5" color={theme === "dark" ? "white" : "black"}>
+            Hii, Every One
           </Typography>
+          <button
+            className="ml-3 stroke-none focus:outline-none"
+            onClick={toggleColorScheme}
+          >
+            {mode === "light" ? (
+              <IoIosSunny className="text-yellow-300 w-6 h-6" />
+            ) : (
+              <IoIosMoon className="text-blue-600 w-6 h-6" />
+            )}
+          </button>
         </div>
         <List className="space-y-2">
           {pages.map((page) => (
             <Link
               to={`/${page.name}`}
               key={page.name}
-              className={`flex items-center ${
-                activePage === page.name ? "bg-gray-200" : ""
+              className={`flex items-center rounded ${
+                activePage === page.name ? "bg-white" : ""
               }`}
               onClick={() => handlePageChange(page.name)}
             >
               <ListItem
                 className={`flex items-center ${
-                  activePage === page.name ? "bg-gray-200" : ""
+                  activePage === page.name ? "bg-grey-100" : ""
                 }`}
               >
                 <ListItemPrefix>
                   {React.createElement(page.icon, {
                     className: `${
-                      activePage === page.name ? "text-black" : "text-gray-500"
+                      activePage === page.name
+                        ? theme === "light"
+                          ? "text-black"
+                          : "text-white"
+                        : ""
                     } h-5 w-5`,
                   })}
                 </ListItemPrefix>
+
                 <span
                   className={`ml-2 ${
                     activePage === page.name ? "font-bold" : ""
@@ -113,13 +125,21 @@ function Sidebar() {
       </Card>
 
       {/* Tombol toggle untuk desktop dan tablet */}
-      {window.innerWidth > 768 && (
-        <div className="md:hidden fixed left-0 top-0 p-4 z-">
+      {window.innerWidth <= 768 && (
+        <div className="md:hidden fixed left-0 top-0 p-4 z-50">
           <button onClick={toggleSidebar}>
             {isSidebarOpen ? (
-              <MdClose className="h-6 w-6" />
+              <MdClose
+                className={`h-6 w-6 ${
+                  mode === "dark" ? "text-white" : "text-black"
+                }`}
+              />
             ) : (
-              <MdMenu className="h-6 w-6" />
+              <MdMenu
+                className={`h-6 w-6 ${
+                  mode === "dark" ? "text-white" : "text-black"
+                }`}
+              />
             )}
           </button>
         </div>
@@ -135,5 +155,3 @@ function Sidebar() {
     </div>
   );
 }
-
-export default Sidebar;

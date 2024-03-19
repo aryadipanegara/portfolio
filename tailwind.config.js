@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
