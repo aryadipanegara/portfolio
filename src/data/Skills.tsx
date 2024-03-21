@@ -21,18 +21,7 @@ import { DiMysql, DiNetbeans } from "react-icons/di";
 import { TbBrandVscode } from "react-icons/tb";
 import { FaFigma } from "react-icons/fa";
 
-export interface Skill {
-  id: number;
-  icon: any;
-  color: string;
-  title: string;
-}
-
-export interface SkillsData {
-  [key: string]: Skill[];
-}
-
-export const skillsData: SkillsData = {
+export const skillsData = {
   languages: [
     { id: 1, icon: FaHtml5, color: "text-orange-500", title: "HTML5" },
     { id: 2, icon: FaCss3, color: "text-blue-500", title: "CSS3" },

@@ -14,7 +14,7 @@ const renderLanguageIcons = (languages) => {
 };
 
 const Projects = () => (
-  <section className={` min-h-full mx-auto px-5 ${theme}`}>
+  <section className={` min-h-screen mx-auto px-5 ${theme}`}>
     <div className="py-7 px-5 sm:px-0">
       <div className="relative top-16">
         <h1 className="text-4xl font-bold mb-10">Projects</h1>
@@ -22,7 +22,7 @@ const Projects = () => (
           {ProjectsData.map((project) => (
             <Card
               key={project.id}
-              className="mb-8 p-6 rounded-md shadow-md relative"
+              className="mb-8 p-6 rounded-md shadow-md relative border dark:text-white dark:bg-black "
             >
               <Typography tag="h2" className="text-2xl font-semibold mb-2">
                 {project.title}
@@ -41,7 +41,7 @@ const Projects = () => (
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black absolute top-2 right-2"
+                  className=" absolute top-2 right-2"
                 >
                   <FaGithub className="text-xl" />
                 </a>
