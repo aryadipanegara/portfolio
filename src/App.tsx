@@ -4,11 +4,13 @@ import Router from "./router";
 import useTheme from "./Theme/useTheme";
 
 export default function App() {
-  const theme = useTheme((state) => (state as ThemeState).theme);
+  const { theme } = useTheme();
+
+  const colorScheme = theme && theme.colorScheme ? theme.colorScheme : "light";
 
   return (
     <MantineProvider
-      theme={{ colorScheme: theme }}
+      theme={{ colorScheme: colorScheme }}
       withNormalizeCSS
       withGlobalStyles
     >
