@@ -2,6 +2,7 @@ import { Card, CardBody } from "@material-tailwind/react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
+  document.title = "Contact | Arya Gunawan";
   return (
     <section className="min-h-screen mx-auto px-5 mt-16 dark:bg-black">
       <div className="py-7 px-5 sm:px-0">

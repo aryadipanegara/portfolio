@@ -15,11 +15,11 @@ function NavList({
 }) {
   return (
     <ul
-      className={`my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 dark:bg-black ${
+      className={`my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:bg-black ${
         theme === "light" ? "bg-white text-black" : "bg-black text-white"
       }`}
     >
-      <li className="p-1 font-medium">
+      <li className="p-1 font-semibold">
         <Link
           to="/"
           className="flex items-center hover:text-blue-500 transition-colors "
@@ -27,7 +27,7 @@ function NavList({
           Home
         </Link>
       </li>
-      <li className="p-1 font-medium">
+      <li className="p-1 font-semibold">
         <Link
           to="/about"
           className="flex items-center hover:text-blue-500 transition-colors"
@@ -35,7 +35,7 @@ function NavList({
           About
         </Link>
       </li>
-      <li className="p-1 font-medium">
+      <li className="p-1 font-semibold">
         <Link
           to="/skills"
           className="flex items-center hover:text-blue-500 transition-colors"
@@ -43,7 +43,7 @@ function NavList({
           Skills
         </Link>
       </li>
-      <li className="p-1 font-medium">
+      <li className="p-1 font-semibold">
         <Link
           to="/projects"
           className="flex items-center hover:text-blue-500 transition-colors"
@@ -51,7 +51,7 @@ function NavList({
           Projects
         </Link>
       </li>
-      <li className="p-1 font-medium">
+      <li className="p-1 font-semibold">
         <Link
           to="/certification"
           className="flex items-center hover:text-blue-500 transition-colors"
@@ -59,7 +59,7 @@ function NavList({
           Certification
         </Link>
       </li>
-      <li className="p-1 font-medium">
+      <li className="p-1 font-semibold">
         <Link
           to="/contact"
           className="flex items-center hover:text-blue-500 transition-colors"

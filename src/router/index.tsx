@@ -5,17 +5,19 @@ import About from "../pages/About";
 import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
+import Certification from "../pages/Certifications";
 
 export default function App() {
   return (
     <Layout>
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route index path="/home" element={<Home />} />
-        <Route index path="/about" element={<About />} />
-        <Route index path="/skills" element={<Skills />} />
-        <Route index path="/projects" element={<Projects />} />
-        <Route index path="/contact" element={<Contact />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/certification" element={<Certification />} />
       </Routes>
     </Layout>
   );
