@@ -6,13 +6,7 @@ import { Link } from "react-router-dom";
 
 type Mode = "light" | "dark";
 
-function NavList({
-  theme,
-  toggleColorScheme,
-}: {
-  theme: Mode;
-  toggleColorScheme: () => void;
-}) {
+function NavList({ theme }: { theme: Mode; toggleColorScheme: () => void }) {
   return (
     <ul
       className={`my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:bg-black ${
@@ -67,15 +61,6 @@ function NavList({
           Contact
         </Link>
       </li>
-      <div className="stroke-none focus:outline-none">
-        <button onClick={toggleColorScheme}>
-          {theme === "light" ? (
-            <IoIosSunny className="text-yellow-300 w-5 h-5" />
-          ) : (
-            <IoIosMoon className="text-blue-600 w-5 h-5" />
-          )}
-        </button>
-      </div>
     </ul>
   );
 }
@@ -110,8 +95,8 @@ export function Nav() {
 
   return (
     <Navbar
-      className="mx-auto max-w-screen-xl px-6 py-3 dark:bg-black st"
-      placeholder={true}
+      className="mx-auto max-w-screen-xl px-6 py-3 dark:bg-black"
+      placeholder="navbar"
     >
       <div className="flex items-center justify-between text-blue-gray-900">
         <div className="hidden lg:block justify-center w-full ">
@@ -121,13 +106,20 @@ export function Nav() {
           />
         </div>
         <button
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
             <IoMdClose className="h-6 w-6 dark:text-white" strokeWidth={2} />
           ) : (
             <IoIosMenu className="h-6 w-6 dark:text-white" strokeWidth={2} />
+          )}
+        </button>
+        <button onClick={toggleColorScheme}>
+          {theme === "light" ? (
+            <IoIosSunny className="text-yellow-300 w-5 h-5 " />
+          ) : (
+            <IoIosMoon className="text-blue-600 w-5 h-5" />
           )}
         </button>
       </div>
