@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IoIosMenu, IoIosMoon, IoIosSunny, IoMdClose } from "react-icons/io";
 import { Navbar, Collapse } from "@material-tailwind/react";
 import useTheme from "../../Theme/useTheme";
+import { Link } from "react-router-dom";
 
 type Mode = "light" | "dark";
 
@@ -19,52 +20,52 @@ function NavList({
       }`}
     >
       <li className="p-1 font-medium">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="flex items-center hover:text-blue-500 transition-colors "
         >
           Home
-        </a>
+        </Link>
       </li>
       <li className="p-1 font-medium">
-        <a
-          href="/About"
+        <Link
+          to="/about"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           About
-        </a>
+        </Link>
       </li>
       <li className="p-1 font-medium">
-        <a
-          href="/Skills"
+        <Link
+          to="/skills"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           Skills
-        </a>
+        </Link>
       </li>
       <li className="p-1 font-medium">
-        <a
-          href="/Projects"
+        <Link
+          to="/projects"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           Projects
-        </a>
+        </Link>
       </li>
       <li className="p-1 font-medium">
-        <a
-          href="/Certification"
+        <Link
+          to="/certification"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           Certification
-        </a>
+        </Link>
       </li>
       <li className="p-1 font-medium">
-        <a
-          href="/Contact"
+        <Link
+          to="/contact"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           Contact
-        </a>
+        </Link>
       </li>
       <div className="stroke-none focus:outline-none">
         <button onClick={toggleColorScheme}>
