@@ -1,11 +1,8 @@
-import React from "react";
-
 import Footer from "./Footer";
-
 import useTheme from "../../Theme/useTheme";
 import { Nav } from "./Navbar";
 
-export const Layout: React.FC = ({ children }) => {
+export function Layout({ children }: { children: JSX.Element }) {
   const { theme } = useTheme();
 
   return (
@@ -18,9 +15,9 @@ export const Layout: React.FC = ({ children }) => {
           theme === "dark" ? "bg-black text-white" : ""
         }`}
       >
-        {children}
+        <section>{children}</section>
       </section>
       <Footer />
     </div>
   );
-};
+}
