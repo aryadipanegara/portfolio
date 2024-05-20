@@ -4,6 +4,7 @@ import { Card, CardBody } from "@material-tailwind/react";
 import { awardsData } from "../data/Certification.data";
 
 export default function Certification() {
+  document.title = "Certification | Arya Gunawan";
   return (
     <section className="min-h-screen mx-auto px-5 mt-16">
       <div className="py-7 px-5 sm:px-0">

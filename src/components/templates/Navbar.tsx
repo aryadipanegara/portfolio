@@ -6,7 +6,16 @@ import { Link } from "react-router-dom";
 
 type Mode = "light" | "dark";
 
-function NavList({ theme }: { theme: Mode; toggleColorScheme: () => void }) {
+function NavList({
+  theme,
+  closeNav,
+}: {
+  theme: Mode;
+  toggleColorScheme: () => void;
+}) {
+  const handleItemClick = () => {
+    closeNav();
+  };
   return (
     <ul
       className={`my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:bg-black ${
@@ -17,6 +26,7 @@ function NavList({ theme }: { theme: Mode; toggleColorScheme: () => void }) {
         <Link
           to="/"
           className="flex items-center hover:text-blue-500 transition-colors "
+          onClick={handleItemClick}
         >
           Home
         </Link>
@@ -25,6 +35,7 @@ function NavList({ theme }: { theme: Mode; toggleColorScheme: () => void }) {
         <Link
           to="/about"
           className="flex items-center hover:text-blue-500 transition-colors"
+          onClick={handleItemClick}
         >
           About
         </Link>
@@ -33,6 +44,7 @@ function NavList({ theme }: { theme: Mode; toggleColorScheme: () => void }) {
         <Link
           to="/skills"
           className="flex items-center hover:text-blue-500 transition-colors"
+          onClick={handleItemClick}
         >
           Skills
         </Link>
@@ -41,6 +53,7 @@ function NavList({ theme }: { theme: Mode; toggleColorScheme: () => void }) {
         <Link
           to="/projects"
           className="flex items-center hover:text-blue-500 transition-colors"
+          onClick={handleItemClick}
         >
           Projects
         </Link>
@@ -49,6 +62,7 @@ function NavList({ theme }: { theme: Mode; toggleColorScheme: () => void }) {
         <Link
           to="/certification"
           className="flex items-center hover:text-blue-500 transition-colors"
+          onClick={handleItemClick}
         >
           Certification
         </Link>
@@ -57,6 +71,7 @@ function NavList({ theme }: { theme: Mode; toggleColorScheme: () => void }) {
         <Link
           to="/contact"
           className="flex items-center hover:text-blue-500 transition-colors"
+          onClick={handleItemClick}
         >
           Contact
         </Link>
@@ -124,7 +139,11 @@ export function Nav() {
         </button>
       </div>
       <Collapse open={openNav}>
-        <NavList theme={theme as Mode} toggleColorScheme={toggleColorScheme} />
+        <NavList
+          theme={theme as Mode}
+          toggleColorScheme={toggleColorScheme}
+          closeNav={() => setOpenNav(false)}
+        />
       </Collapse>
     </Navbar>
   );
