@@ -6,26 +6,26 @@ import { Link } from "react-router-dom";
 
 type Mode = "light" | "dark";
 
-function NavList({
-  theme,
-  closeNav,
-}: {
+interface NavListProps {
   theme: Mode;
-  toggleColorScheme: () => void;
-}) {
+  closeNav: () => void;
+}
+
+function NavList({ theme, closeNav }: NavListProps) {
   const handleItemClick = () => {
     closeNav();
   };
+
   return (
     <ul
-      className={`my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:bg-black ${
+      className={`my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 dark:bg-black ${
         theme === "light" ? "bg-white text-black" : "bg-black text-white"
       }`}
     >
       <li className="p-1 font-semibold">
         <Link
           to="/"
-          className="flex items-center hover:text-blue-500 transition-colors "
+          className="flex items-center hover:text-blue-500 transition-colors"
           onClick={handleItemClick}
         >
           Home
@@ -114,11 +114,8 @@ export function Nav() {
       placeholder="navbar"
     >
       <div className="flex items-center justify-between text-blue-gray-900">
-        <div className="hidden lg:block justify-center w-full ">
-          <NavList
-            theme={theme as Mode}
-            toggleColorScheme={toggleColorScheme}
-          />
+        <div className="hidden lg:block justify-center w-full">
+          <NavList theme={theme as Mode} closeNav={() => setOpenNav(false)} />
         </div>
         <button
           className="h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -132,18 +129,14 @@ export function Nav() {
         </button>
         <button onClick={toggleColorScheme}>
           {theme === "light" ? (
-            <IoIosSunny className="text-yellow-300 w-5 h-5 " />
+            <IoIosSunny className="text-yellow-300 w-5 h-5" />
           ) : (
             <IoIosMoon className="text-blue-600 w-5 h-5" />
           )}
         </button>
       </div>
       <Collapse open={openNav}>
-        <NavList
-          theme={theme as Mode}
-          toggleColorScheme={toggleColorScheme}
-          closeNav={() => setOpenNav(false)}
-        />
+        <NavList theme={theme as Mode} closeNav={() => setOpenNav(false)} />
       </Collapse>
     </Navbar>
   );
