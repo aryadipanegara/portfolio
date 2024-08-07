@@ -104,7 +104,7 @@ export default function About() {
                 >
                   You can read my resume{" "}
                   <a
-                    href="https://drive.google.com/file/d/1EO5CpRYu54ndiPt2ZwR2-ZHn9oUOzFq9/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1MSGmghQU_6V9mLy0DUy8XBHBp64FHDn6/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline cursor-pointer text-blue-500"
