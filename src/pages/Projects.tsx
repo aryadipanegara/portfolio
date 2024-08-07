@@ -31,7 +31,7 @@ export default function Projects() {
               <Card
                 key={project.id}
                 placeholder="card"
-                className="mb-8 p-6 rounded-md shadow-md relative border dark:text-white dark:bg-black"
+                className="mb-8 p-6 rounded-md shadow-md text-black relative border dark:text-white dark:bg-black"
               >
                 <Typography
                   placeholder="title"

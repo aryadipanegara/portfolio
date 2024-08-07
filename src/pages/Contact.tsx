@@ -4,11 +4,11 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Contact() {
   document.title = "Contact | Arya Gunawan";
   return (
-    <section className="min-h-screen mx-auto px-5 mt-16 dark:bg-black">
+    <section className="min-h-screen mx-auto px-5 mt-16 text-black dark:bg-black dark:text-white">
       <div className="py-7 px-5 sm:px-0">
         <div className=" relative">
           <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
-          <p className="mb-8">
+          <p className="mb-8 text-black dark:bg-black dark:text-white">
             If you have any questions or if there's anything else I can help you
             with, feel free to contact me. You can reach out to me through the
             following channels:
@@ -16,7 +16,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
               placeholder="card"
-              className="dark:bg-black dark:text-white border"
+              className=" text-black dark:bg-black dark:text-white border"
             >
               <CardBody placeholder="cardbody">
                 <FaLinkedin className="text-6xl mb-4 text-blue-500" />
@@ -36,7 +36,7 @@ export default function Contact() {
             </Card>
             <Card
               placeholder="card"
-              className="dark:bg-black dark:text-white border"
+              className=" text-black dark:bg-black dark:text-white border"
             >
               <CardBody placeholder="cardbody">
                 <FaGithub className="text-6xl mb-4" />
@@ -56,7 +56,7 @@ export default function Contact() {
             </Card>
             <Card
               placeholder="card"
-              className="dark:bg-black dark:text-white border"
+              className=" text-black dark:bg-black dark:text-white border"
             >
               <CardBody placeholder="cardbody">
                 <FaEnvelope className="text-6xl mb-4 text-red-500" />

@@ -1,10 +1,33 @@
 import { FaHtml5, FaCss3, FaJsSquare, FaReact } from "react-icons/fa";
 import { BiLogoRedux, BiLogoTailwindCss } from "react-icons/bi";
-import { SiCodeigniter, SiExpo, SiFlutter, SiMysql } from "react-icons/si";
+import {
+  SiCodeigniter,
+  SiExpo,
+  SiFlutter,
+  SiMantine,
+  SiMysql,
+  SiTypescript,
+} from "react-icons/si";
 
 export const ProjectsData = [
   {
     id: 1,
+    title: "Monitoring Produksi Dan Slip Gaji",
+    description:
+      "Developing a local web system for PT. Tritek Indonesia to monitor production and manage pay slips, uses TypeScript and Next.js on the frontend, and JavaScript and Express.js on the backend.",
+    languages: [
+      { id: 1, icon: FaReact, color: "text-blue-500" },
+      { id: 2, icon: BiLogoTailwindCss, color: "text-cyan-400" },
+      { id: 3, icon: FaJsSquare, color: "text-yellow-500" },
+      { id: 4, icon: SiTypescript, color: "text-blue-500" },
+      { id: 5, icon: SiMantine, color: "text-blue-500" },
+      { id: 6, icon: SiMysql, color: "text-blue-500" },
+    ],
+    githubLink: "https://github.com/AryaGunawann/Monitoring-Produksi.git",
+    livePreview: "",
+  },
+  {
+    id: 2,
     title: "Masjidinfo",
     description: "website about the history of mosques located in the world",
     languages: [
