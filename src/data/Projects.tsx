@@ -41,7 +41,7 @@ export const ProjectsData = [
     livePreview: "https://masjidinfo.vercel.app",
   },
   {
-    id: 2,
+    id: 3,
     title: "News",
     description:
       "This is a news website that displays news from Indonesia to abroad.",
@@ -54,7 +54,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/AryaGunawann/FP-HKTV8-News_API.git",
   },
   {
-    id: 2,
+    id: 4,
     title: "Shupee",
     description:
       "front end e-commerce application website that displays very attractive products",
@@ -68,7 +68,7 @@ export const ProjectsData = [
     livePreview: "https://fp-hktv-8-shupee.vercel.app",
   },
   {
-    id: 3,
+    id: 5,
     title: "TravelNest",
     description:
       "This hotel reservation application was created specifically for mobile phones to rent temporary accommodation. ",
@@ -81,7 +81,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/AryaGunawann/FP-HKTV8-TravelNest.git",
   },
   {
-    id: 4,
+    id: 6,
     title: "CarRent",
     description: "car rental application website with interesting features. ",
     languages: [
@@ -94,7 +94,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/AryaGunawann/Car-rent.git",
   },
   {
-    id: 5,
+    id: 7,
     title: "Daftar Statius Kereta Api",
     description:
       "simple mobile application with flutter displays train stations in Indonesia ",
