@@ -8,26 +8,22 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aryadipanegara.com"),
   title: {
-    default: "Arya Dipanegara | Frontend development",
+    default: "Arya Dipanegara | Frontend Developer",
     template: "%s | Arya Dipanegara",
   },
   description:
-    "Arya Dipanegara is a passionate full stack developer and UI/UX designer, crafting innovative web solutions with cutting-edge technologies. Explore my portfolio showcasing expertise in React, Node.js, and modern web development practices.",
+    "Arya Dipanegara is a passionate frontend developer, crafting innovative web solutions with cutting-edge technologies. Explore my portfolio showcasing expertise in React, JavaScript, and modern web development practices.",
   keywords: [
-    "Full Stack Developer",
-    "Frontend Development",
+    "Frontend Developer",
     "Software Engineer",
     "React Developer",
-    "Node.js Developer",
+    "JavaScript Developer",
     "TypeScript Developer",
-    "Aurora Dipanegara",
-    "UI/UX Designer",
+    "Arya Dipanegara",
     "Web Development",
     "React",
-    "Node.js",
     "JavaScript",
     "TypeScript",
-    "Arya Dipanegara",
   ],
   authors: [{ name: "Arya Dipanegara", url: "https://www.aryadipanegara.com" }],
   creator: "Arya Dipanegara",
@@ -53,25 +49,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.aryadipanegara.com",
-    title: "Arya Dipanegara | Frontend development",
+    title: "Arya Dipanegara | Frontend Developer",
     description:
-      "Discover the portfolio of Arya Dipanegara, a skilled full stack developer and UI/UX designer. Explore innovative web solutions and cutting-edge projects.",
+      "Discover the portfolio of Arya Dipanegara, a skilled frontend developer. Explore innovative web solutions and cutting-edge projects.",
     siteName: "Arya Dipanegara Portfolio",
     images: [
       {
-        url: "https://www.aryadipanegara.com/og-image.jpg",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Arya Dipanegara - Frontend development",
+        alt: "Arya Dipanegara - Frontend Developer",
       },
       {
-        url: "https://www.aryadipanegara.com/og-image-alt.jpg",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 600,
         alt: "Arya Dipanegara's Latest Projects",
       },
     ],
-    locale: "en_US",
+    locale: "id_ID",
     countryName: "Indonesia",
   },
   twitter: {
@@ -80,8 +76,8 @@ export const metadata: Metadata = {
     creator: "@aryadipanegara",
     title: "Arya Dipanegara | Innovative Web Solutions",
     description:
-      "Full stack developer and UI/UX designer crafting next-gen web experiences. Explore my portfolio for cutting-edge projects and insights.",
-    images: ["https://www.aryadipanegara.com/twitter-image.jpg"],
+      "Frontend developer crafting next-gen web experiences. Explore my portfolio for cutting-edge projects and insights.",
+    images: ["/opengraph-image.png"],
   },
   verification: {
     google: "google-site-verification-code",
@@ -96,11 +92,11 @@ export const metadata: Metadata = {
     },
   },
   category: "Technology",
-  classification: "Web Development, UI/UX Design",
+  classification: "Web Development",
   other: {
     "dc.creator": "Arya Dipanegara",
     "dc.description":
-      "Portfolio of Arya Dipanegara, showcasing expertise in full stack development and UI/UX design.",
+      "Portfolio of Arya Dipanegara, showcasing expertise in frontend development.",
     "dc.publisher": "Arya Dipanegara",
     "dc.title": "Arya Dipanegara Portfolio",
     "dc.language": "en-US",
