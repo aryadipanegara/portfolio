@@ -6,7 +6,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.aryadipanegara.com"),
+  // metadataBase: new URL("https://www.aryadipanegara.com"),
   title: {
     default: "Arya Dipanegara | Frontend Developer",
     template: "%s | Arya Dipanegara",
@@ -25,7 +25,9 @@ export const metadata: Metadata = {
     "JavaScript",
     "TypeScript",
   ],
-  authors: [{ name: "Arya Dipanegara", url: "https://www.aryadipanegara.com" }],
+  authors: [
+    { name: "Arya Dipanegara", url: "https://aryagunawann.vercel.app/" },
+  ],
   creator: "Arya Dipanegara",
   publisher: "Arya Dipanegara",
   formatDetection: {
@@ -46,30 +48,6 @@ export const metadata: Metadata = {
   },
 
   applicationName: "Arya Dipanegara Portfolio",
-  openGraph: {
-    type: "website",
-    url: "https://www.aryadipanegara.com",
-    title: "Arya Dipanegara | Frontend Developer",
-    description:
-      "Discover the portfolio of Arya Dipanegara, a skilled frontend developer. Explore innovative web solutions and cutting-edge projects.",
-    siteName: "Arya Dipanegara Portfolio",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Arya Dipanegara - Frontend Developer",
-      },
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 600,
-        alt: "Arya Dipanegara's Latest Projects",
-      },
-    ],
-    locale: "id_ID",
-    countryName: "Indonesia",
-  },
   twitter: {
     card: "summary_large_image",
     site: "@aryadipanegara",
@@ -77,7 +55,6 @@ export const metadata: Metadata = {
     title: "Arya Dipanegara | Innovative Web Solutions",
     description:
       "Frontend developer crafting next-gen web experiences. Explore my portfolio for cutting-edge projects and insights.",
-    images: ["/opengraph-image.png"],
   },
   verification: {
     google: "google-site-verification-code",
