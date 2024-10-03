@@ -87,7 +87,7 @@ html {
 
 /* Warna track (background) dari scrollbar */
 ::-webkit-scrollbar-track {
-  background: #1a202c; /* Warna gelap, misalnya */
+  background: #000000; /* Warna gelap, misalnya */
 }
 
 /* Warna handle (bagian yang bisa di-drag) */

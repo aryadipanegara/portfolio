@@ -1,4 +1,3 @@
-import { AuroraBackground } from "@/components/ui/aurora-background";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -89,9 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuroraBackground>
-          <main className="min-h-screen p-8">{children}</main>
-        </AuroraBackground>
+        <main className="min-h-screen p-8 bg-black">{children}</main>
       </body>
     </html>
   );
