@@ -17,7 +17,7 @@ const paragraphs = [
 
 export function About() {
   return (
-    <div className="py-16 px-4 max-w-4xl mx-auto rounded-3xl" id="about">
+    <div className="py-16 max-w-4xl mx-auto rounded-3xl" id="about">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

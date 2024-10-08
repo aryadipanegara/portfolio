@@ -44,7 +44,7 @@ export function Experience() {
   const linkVariants = {
     hover: {
       scale: 1.05,
-      color: "#3B82F6", // text-blue-500
+      color: "#3B82F6",
       transition: {
         type: "spring",
         stiffness: 400,
@@ -54,10 +54,7 @@ export function Experience() {
   };
 
   return (
-    <section
-      className="py-16 px-4 max-w-4xl mx-auto rounded-3xl"
-      id="experience"
-    >
+    <section className="py-16 max-w-4xl mx-auto rounded-3xl" id="experience">
       <motion.div
         className="space-y-12"
         variants={containerVariants}
@@ -103,7 +100,7 @@ export function Experience() {
         ))}
       </motion.div>
       <motion.div
-        className="mt-12 flex"
+        className="mt-12 flex justify-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
@@ -111,14 +108,14 @@ export function Experience() {
         <Button
           variant="ghost"
           size="lg"
-          className="text-white hover:bg-blue-800 hover:text-blue-300 transition-colors duration-300"
+          className="text-white hover:bg-blue-800 hover:text-blue-300 transition-colors duration-300 items-center justify-center"
           asChild
         >
           <a
-            href="/path-to-your-resume.pdf"
+            href="https://drive.google.com/file/d/1VDq8lKwxBCHvBBEYFUSYs9z1NJZjAfJt/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex "
+            className="flex"
           >
             View My Resume
             <ExternalLink size={20} className="ml-2" />
